@@ -1,0 +1,119 @@
+@charset "utf-8";
+
+/* 공통 */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: spotify-circular, Helvetica, Arial, sans-serif;
+  color:#fff;
+}
+
+ul li {
+  list-style: none;
+}
+
+body {
+  background-color: #fff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.f-le {
+  float: left;
+}
+
+.m-auto {
+  margin: 0 auto;
+}
+
+.m-top {
+  margin-top: 20px;
+}
+
+/* 상단 영역 */
+
+.top-header {
+  width: 100%;
+  height: 80px;
+  background-color: #000;
+  top: 0;
+  left: 0;
+  position: relative;
+}
+
+.header-wrap {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 1300px;
+}
+
+#logoWrap {
+  width: 150px;
+  height: 80px;
+}
+
+.logo-img > img {
+  height: 42px;
+  vertical-align: middle;
+}
+
+.top-nav{
+  display: flex;
+  height: 80px;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: 350px;
+}
+
+.top-nav ul{
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  align-items: center;
+}
+
+.top-nav ul li{
+  height: 80px;
+}
+
+.top-nav ul li a,
+.top-nav ul li span {
+  display: block;
+  line-height: 80px;
+}
+
+.top-nav ul li a:hover {
+  color: #1ed760;
+}
+
+.nav-item {
+  padding: 0px 17px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* 메인 영역 */
+
+main {
+  height: 968px;
+  background-color: rgb(41, 65, 171);
+  background-image: url(https://www-growth.scdn.co/static/home/bursts.svg);
+  background-size: 175%;
+  background-position: 46% 4%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 하단 영역 */
+footer {
+  height: 530px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
