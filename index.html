@@ -15,6 +15,11 @@
   <body>
     <header class="top-header">
       <div class="header-wrap m-auto">
+        <audio
+          id="background-audio"
+          src="assets/관객이 될게 (I stan U).mp3"
+          type="audio/mpeg"
+        ></audio>
         <!-- 로고 -->
         <a href="index.html">
           <div class="logo-img f-le">
@@ -121,5 +126,26 @@
         </div>
       </div>
     </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var audio = document.getElementById("background-audio");
+
+        audio.play();
+
+        audio.loop = true;
+
+        audio.onpause = function () {
+          setTimeout(function () {
+            audio.play();
+          }, 1000);
+        };
+
+        document.body.addEventListener("click", function () {
+          if (audio.paused) {
+            audio.play();
+          }
+        });
+      });
+    </script>
   </body>
 </html>
