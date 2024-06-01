@@ -22,10 +22,6 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  color: #1ed760;
-}
-
 .f-le {
   float: left;
 }
@@ -91,6 +87,9 @@ a:hover {
   line-height: 80px;
 }
 
+.top-nav ul li a:hover {
+  color: #1ed760;
+}
 
 .nav-item {
   padding: 0px 17px;
@@ -102,55 +101,75 @@ a:hover {
 
 main {
   height: 968px;
-  background-color: rgb(41, 65, 171);
-  background-image: url(https://www-growth.scdn.co/static/home/bursts.svg);
-  background-size: 175%;
-  background-position: 46% 4%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: #333;
+  background-image: url(./imgs/poster03.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: 0.4s;  /* 모든 요소에 0.4초의 변형(트랜스폼) 효과를 부여합니다. */
 }
 
-.headline {
-  font-size: 146px;
-  line-height: 166px;
-  color: #1ed760;
-  font-weight: 900;
-  position: relative;
-  left: 225px;
-  padding-bottom: 40px;
-}
-
-.headline-first {
-  position: relative;
-  left: -2.5em;
-}
-
-.sub-headline {
-  color: #1ed760;
-  font-size: 18px;
-  line-height: 24px;
-  padding-bottom: 40px;
+/* 메인 헤더 스타일 설정 */
+#main_section {
+  position: absolute;
+  width: 520px;
+  right: 0;
+  height: 100vh; /* 화면 높이와 동일한 높이 설정 */
   text-align: center;
+  padding-top: 90px;
+  padding-right: 40px;
 }
 
-.button-area {
-  text-align: center;
+/* 헤더 박스 스타일 설정 */
+.header_box {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%); /* 수직 중앙 정렬 */
 }
 
-.button-style {
-  padding: 14px 32px;
-  background-color: #1ed760;
-  border-radius: 500px;
-  font-size: inherit;
-  color: #2941ab;
+/* 메인 헤더의 제목 이미지 스타일 설정 */
+#main_section h1 > img {
+  width: 480px;
+}
+
+#main_section p {
+  font-size: 40px;
   font-weight: 700;
-  border: none;
+  margin-top: 15px;
 }
 
-.button-style:hover {
-  transform: scale(1.07);
-  background-color: #2de26d;
+/* 메인 헤더의 부가 정보 스타일 설정 */
+#main_section .origin {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 29px;
+  margin-bottom: 30px;
+}
+
+/* 부가 정보 항목 스타일 설정 */
+#main_section .origin > li > span {
+  font-size: 14px;
+}
+
+/* 애니메이션 효과 */
+.header_box h1 img {
+  animation-name: logo;
+  animation-duration: 6s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-delay: 1s;
+}
+
+@keyframes logo {
+  from {
+    transform: scale(0.9);
+  }
+
+  to {
+    transform: scale(1.0);
+  }
 }
 
 /* 하단 영역 */
@@ -197,6 +216,10 @@ footer a {
   text-decoration: none;
   color: white;
   padding: 3px 0px 15px;
+}
+
+footer a:hover {
+  color: #1ed760;
 }
 
 .second-box {
